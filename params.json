@@ -1,0 +1,6 @@
+{
+  "name": "Konf Typesafe Config Adapter",
+  "tagline": "Adapter to use typesafe config from Konf so you can combine TypeSafe config and conf.",
+  "body": "[Konf Website](http://advantageous.github.io/konf/)\r\n\r\n# Konf - Typed Java Config Integration\r\n\r\nThis allows you to combine TypeSafe config and Konf.\r\nYou can have TypeSafe config be a fallback for Konf or the other way around.\r\n\r\n\r\nYou can load TypeSafe config as a Konf `Config` instance as follows:\r\n\r\n#### Loading Typesafe config as a Konf Config object\r\n```java\r\n\r\n        Config config = TypeSafeConfig.typeSafeConfig();\r\n        final String abc = config.getString(\"abc\");\r\n        assertEquals(\"abc\", abc);\r\n```\r\n\r\nYou can also chain TypeSafe config as fallback or Konfig as a fallback\r\nfor TypeSafe config as follows:\r\n\r\n\r\n#### Konf as a fallback for TypeSafe config. \r\n\r\n```java\r\n\r\n\r\nimport static io.advantageous.config.ConfigLoader.config;\r\nimport static io.advantageous.config.ConfigLoader.configs;\r\nimport static io.advantageous.config.ConfigLoader.load;\r\n\r\n...\r\n\r\n    Config config;\r\n    ...\r\n        config = configs(TypeSafeConfig.typeSafeConfig(), config(\"test-config.js\"));\r\n```",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
